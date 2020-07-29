@@ -28,6 +28,4 @@ The rockyou.txt, 10 million word wordlist, and 10 thousand wordlist are all file
 
 
 ## Known Issues
-1) When cracking a zip file, some files may not be extracted properly when using the large wordlists because of a bug in the ZipFile module.
-
-Read more [here](https://github.com/python/cpython/pull/12242)
+1) When cracking a zip file, some files may not be extracted properly when using the large wordlists because of a bug in the ZipFile module. Read more [here](https://github.com/python/cpython/pull/12242)
