@@ -13,7 +13,7 @@ Format: main.py &#60;command&#62; [zip file name when cracking]
 <pre>
 The syntax commands are:
 -a      --analyze            analyze a password and determine it's complexity
--c      --crack              attempt to crack the password of a .zip file using word lists by Daniel Miessler
+-c      --crack              attempt to crack the password of a .zip file using wordlists by Daniel Miessler
 -g      --generate           generate a random and complex password
 -h      --help               prints helpful information.
 
