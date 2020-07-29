@@ -4,7 +4,7 @@ import analysis_and_generator
 import file_cracker
 
 
-def manual():
+def usage():
     print('Password Analyzer and File Cracker')
     print('\n')
 
@@ -13,9 +13,10 @@ def manual():
           + 'for ".zip" files.')
     print('The wordlists used in this program were obtained from Daniel Miessler. However uou can also '
           + 'add your words to the "custom_wordlist.txt" file in the Wordlist directory to be used.')
+    print('Note: Words in the "custom_wordlist.txt" file will always be the first wordlist to be used.')
     print('\n')
 
-    print('Syntax:')
+    print('Syntax commands:')
     print('-a      --analyze            analyze a password and determine it\'s complexity')
     print('-c      --crack              attempt to crack the password of a .zip file using word lists by Daniel '
           + 'Miessler')
@@ -28,7 +29,6 @@ def manual():
     print('rockyou          [slow] a wordlist containing about 60 thousand words')
     print('10m              [slower] a wordlist containing 10 million words')
     print('all              [very slow] this option uses all wordlists in this program.')
-    print('Note: Words in the "custom_wordlist.txt" file will always be the first wordlist to be used.')
     print('\n')
 
     print('Author: www.github.com/FIRE-IN-THE-CODE')
@@ -41,15 +41,19 @@ def main():
         if o == '-a' or o == '--analyze':
             analysis_and_generator.analyze(a)
         elif o in ('-c', '--crack'):
-            file_cracker.crack_zip_file(a)
+            try:
+                file_cracker.crack_zip_file(a)
+            except FileNotFoundError:
+                print('The zip file "%s" was not found.' % a)
+                exit(0)
         elif o in ('-g', '--generate'):
             analysis_and_generator.password_generator()
         elif o in ('-h', 'help'):
-            manual()
+            usage()
         else:
             print('Select an option.')
             print('\n')
-            manual()
+            usage()
 
 
 if __name__ == '__main__':

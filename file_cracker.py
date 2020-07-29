@@ -58,7 +58,7 @@ def crack_zip_file(zip_file):
         choice = input('Which wordlist do you want to use? ')
         print('\n')
 
-        if choice == '10k' or choice == 'rockyou' or choice == '10m' or choice == 'all':
+        if choice == '10k' or choice == 'rockyou' or choice == '10m' or choice == 'all' or 'none':
             choosing_wordlist(choice)
             choice_condition = False
 
