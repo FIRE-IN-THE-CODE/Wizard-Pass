@@ -1,4 +1,8 @@
-# Wizard Pass
+<h1 align='center'>Wizard Pass</h1>
+
+![Build](https://img.shields.io/badge/Build_Status-Complete-green)
+![Python](https://img.shields.io/badge/Python-3-blue)
+
 Wizard Pass is an all in one password strength analyzer, password generator, and .zip file password cracker.
 
 
