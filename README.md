@@ -7,15 +7,17 @@ Wizard Pass is an all in one password strength analyzer, password generator, and
 
 
 ## Requirements
-Requires Python to be installed on computer.
+1) Requires Python and Pip to be installed on computer.
+2) The Pip module pyperclip is used in this program which makes use of the pbcopy and pbpaste commands on MacOS and 
+the xclip or xsel commands in Linux.
 
 
 ## Usage Guide
 Wizard Pass uses a commandline interface to work. <br>
-Format: main.py &#60;command&#62; [zip file name when cracking]
+Syntax: &#60;command&#62; [zip file name when cracking]
 
 <pre>
-The syntax commands are:
+The commands are:
 -a      --analyze            analyze a password and determine it's complexity
 -c      --crack              attempt to crack the password of a .zip file using wordlists by Daniel Miessler
 -g      --generate           generate a random and complex password
