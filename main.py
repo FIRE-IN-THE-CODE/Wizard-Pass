@@ -31,7 +31,7 @@ def usage():
     print('all              [very slow] this option uses all wordlists in this program.')
     print('\n')
 
-    print('Author: www.github.com/FIRE-IN-THE-CODE')
+    print('Author: https://www.github.com/FIRE-IN-THE-CODE')
 
 
 def main():
