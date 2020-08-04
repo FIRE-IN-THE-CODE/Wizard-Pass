@@ -1,4 +1,5 @@
 import random
+import pyperclip
 
 special_characters = ['!', '@', '#', '$', '%', '&', '*', '(', ')']
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q'
@@ -81,5 +82,6 @@ def password_generator():
         generated_password += i
 
     print('[+] Your generated password is: %s' % generated_password)
-
+    pyperclip.copy(generated_password)
+    print('[+] Your password has been copied to your clipboard!')
     analyze(generated_password)
